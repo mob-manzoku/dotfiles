@@ -7,10 +7,18 @@
 ;; lisp directory's path
 (add-to-load-path "~/.emacs.d/lisp")
 ;; load
-(load "jedi")
 (load "make-backup-file")
-(autoload 'markdown-mode "markdown-mode.el" "Major mode for editing Markdown files" t)
+(load "package")
 
-;; add list
+;; Markdown
+(autoload 'markdown-mode "markdown-mode.el" "Major mode for editing Markdown files" t)
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
+;; Python
+(load "jedi")
+;;(load "python-pep8")
+
+;; YAML
+(load "yaml-mode")
+(require 'yaml-mode)
+    (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
