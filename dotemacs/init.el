@@ -10,6 +10,10 @@
 (load "make-backup-file")
 (load "package")
 
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "/home/ubuntu/.emacs.d/lisp/ac-dict")
+(ac-config-default)
+
 ;; Markdown
 (autoload 'markdown-mode "markdown-mode.el" "Major mode for editing Markdown files" t)
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
@@ -22,3 +26,13 @@
 (load "yaml-mode")
 (require 'yaml-mode)
     (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+
+;; js
+(load "js2-mode")
+
+(load "angular-mode")
+(add-to-list 'auto-mode-alist '("\\.js$"     . angular-mode))
+(add-to-list 'auto-mode-alist '("\\.js$"     . js2-mode))
+
+(load "angular-html-mode")
+(add-to-list 'auto-mode-alist '("\\.html$"     . angular-html-mode))
