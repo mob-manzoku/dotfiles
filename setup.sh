@@ -4,6 +4,8 @@ script_dir=$(cd $(dirname ${BASH_SOURCE:-$0}); pwd)
 dot_dir="dotemacs"
 target_dir="$HOME/.emacs.d"
 
+mkdir ~/.bak_emacs
+
 if [ -L $target_dir ]; then
     exit
 fi

@@ -1,16 +1,18 @@
-((("angular-html-mode" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("Angular" .
+((("module" .
+   [1 0 0 0 0 0])
+  ("angular" .
    [0 0 0 0 1 0 0])
-  ("load" .
-   [2 0 0 0])
-  ("script_dir" .
+  ("target_dir" .
    [0 0 1 0 0 0 0 0 0 0])
   ("print" .
    [0 0 2 2 0])
-  ("target_dir" .
+  ("script_dir" .
    [0 0 1 0 0 0 0 0 0 0])
-  ("angular" .
+  ("load" .
+   [2 0 0 0])
+  ("Angular" .
    [0 0 0 0 1 0 0])
-  ("module" .
-   [1 0 0 0 0 0])))
+  ("angular-html-mode" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("USER" .
+   [0 0 0 1])))
