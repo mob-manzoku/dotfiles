@@ -2,8 +2,7 @@ export HISTFILE="${HOME}/.zsh.d/.zsh_history"
 export HISTSIZE=100000
 export SAVEHIST=${HISTSIZE}
 
-# emacs風キーバインド
-bindkey -e
+
 
 export LS_COLORS="\
 no=00:\

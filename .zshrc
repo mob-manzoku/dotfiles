@@ -15,6 +15,10 @@ if [ -f ${HOME}/.zsh.d/zsh_aliases ]; then
     source ${HOME}/.zsh.d/zsh_aliases
 fi
 
+if [ -f ${HOME}/.zsh.d/zsh_aws ]; then
+    source ${HOME}/.zsh.d/zsh_aws
+fi
+
 if [ -f ${HOME}/.zsh.d/zsh_tmux ]; then
     source ${HOME}/.zsh.d/zsh_tmux
 fi

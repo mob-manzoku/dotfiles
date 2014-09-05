@@ -1,0 +1,14 @@
+source /usr/local/bin/aws_zsh_completer.sh
+complete -C aws_completer aws
+
+alias aws-drz-jp='aws --profile drz-jp'
+complete -C aws_completer aws-drz
+
+alias aws-mpz='aws --profile mpz'
+complete -C aws_completer aws-mpz
+
+alias aws-next='aws --profile next'
+complete -C aws_completer aws-next
+
+alias aws-quu='aws --profile quu'
+complete -C aws_completer aws-quu
