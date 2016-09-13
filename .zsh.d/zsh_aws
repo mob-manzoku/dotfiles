@@ -1,14 +1,17 @@
+# Enable complete
 source /usr/local/bin/aws_zsh_completer.sh
 complete -C aws_completer aws
 
-alias aws-drz-jp='aws --profile drz-jp'
-complete -C aws_completer aws-drz
+# Create alias for each profile
+AWSCRED="$HOME/.aws/credentials"
 
-alias aws-mpz='aws --profile mpz'
-complete -C aws_completer aws-mpz
-
-alias aws-next='aws --profile next'
-complete -C aws_completer aws-next
-
-alias aws-quu='aws --profile quu'
-complete -C aws_completer aws-quu
+if [ ! -e $AWSCRED ]; then
+    echo "Not found $AWSCRED"
+else
+    echo "Create aws-XXX aliases by $AWSCRED"
+    for p in `cat $AWSCRED | grep "\[" | sed 's/\[\(.*\)\]/\1/g' | grep profile | cut -d" " -f2`
+    do
+        alias "aws-$p"="aws --profile $p"
+        complete -C aws_completer aws-$p
+    done
+fi

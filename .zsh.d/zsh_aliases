@@ -9,11 +9,20 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-alias ls="ls -ahF"
+alias ls="ls -hF --color=auto"
 alias l="ls"
-alias ll="ls -la"
+alias ll="ls -l"
 alias lll="ls -l"
 alias la="ls -a"
 alias lal="ls -al"
+alias lla="ls -al"
 alias lt="ls -lt"
 alias ltr="ls -ltr"
+
+alias e="emacs"
+
+# Ansible
+alias ap="ansible-playbook"
+alias aw="ansible-working"
+alias assh="ansible-pssh"
+
