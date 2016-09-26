@@ -32,6 +32,7 @@ alias gld='git log --pretty=format:"%h %ad %s" --date=short --all'
 alias gm='git merge --no-ff'
 alias gmm='git merge master'
 alias gp='git pull'
+alias gpr='git pull-request'
 alias gss='git status'
 alias gst='git stash'
 alias gstl='git stash list'
@@ -39,6 +40,8 @@ alias gstp='git stash pop'
 alias gstd='git stash drop'
 alias gwip='git add .; git commit -m wip; git push origin'
 alias gfu='git add .; git commit -m fixup; git push origin'
+alias gcd='cd "$(git rev-parse --show-toplevel)"'
+
 
 # ----------------------
 # Git Function
