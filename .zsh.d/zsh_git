@@ -40,11 +40,17 @@ alias gstp='git stash pop'
 alias gstd='git stash drop'
 alias gwip='git add .; git commit -m wip; git push origin'
 alias gfu='git add .; git commit -m fixup; git push origin'
-alias gcd='cd "$(git rev-parse --show-toplevel)"'
 
 
 # ----------------------
 # Git Function
 # ----------------------
+
 # Git log find by commit message
 function glf() { git log --all --grep="$1"; }
+
+# cd to git directory based on git-root
+function gcd() {
+    cd "$(git rev-parse --show-toplevel)"/"$1"
+    pwd
+}
