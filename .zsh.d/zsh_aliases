@@ -19,6 +19,12 @@ alias lla="ls -al"
 alias lt="ls -lt"
 alias ltr="ls -ltr"
 
+alias     u="cd ../"
+alias    uu="cd ../../"
+alias   uuu="cd ../../../"
+alias  uuuu="cd ../../../../"
+alias uuuuu="cd ../../../../../"
+
 alias e="emacs"
 
 # Ansible
