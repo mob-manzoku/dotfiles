@@ -49,8 +49,39 @@ alias gfu='git add .; git commit -m fixup; git push origin'
 # Git log find by commit message
 function glf() { git log --all --grep="$1"; }
 
+
 # cd to git directory based on git-root
 function gcd() {
-    cd "$(git rev-parse --show-toplevel)"/"$1"
+    CDTO="$(git rev-parse --show-toplevel)"
+
+    while [ $# -gt 0 ]
+    do
+	CDTO="$CDTO/$1"
+	shift
+    done
+
+    cd "$CDTO"
     pwd
 }
+
+function _gcd() {
+    GIT_ROOT="$(git rev-parse --show-toplevel)"
+
+    _arguments -C \
+	'1:: :->1' \
+	'2:: :->2' \
+	&& ret=0
+
+    case "$state" in
+	(1)
+	    compadd `find $GIT_ROOT -maxdepth 1 -mindepth 1 -type d -not -name '.*' | xargs -I{} basename {}`
+	    ;;
+
+	(2)
+	    compadd `find "$GIT_ROOT/$words[2]" -maxdepth 1 -mindepth 1 -type d -not -name '.*' | xargs -I{} basename {}`
+	    ;;
+    esac
+
+}
+
+compdef _gcd gcd
