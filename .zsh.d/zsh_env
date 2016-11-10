@@ -13,3 +13,10 @@ if [ -d "${PYENV_ROOT}" ]; then
    export PATH=${PYENV_ROOT}/bin:$PATH
    eval "$(pyenv init -)"
 fi
+
+# Editor
+export EDITOR=emacs
+
+# Pager
+export LESS="-g -M -R"
+export PAGER=less

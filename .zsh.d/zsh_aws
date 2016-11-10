@@ -1,10 +1,14 @@
 #----------------------
+# GCP
+#----------------------
+source $HOME/scripts/google-cloud-sdk/completion.zsh.inc
+
+#----------------------
 # AWS
 #----------------------
 
 # Enable complete
 source /usr/local/bin/aws_zsh_completer.sh
-complete -C aws_completer aws
 
 # Create alias for each profile
 AWSCRED="$HOME/.aws/credentials"
@@ -12,15 +16,13 @@ AWSCRED="$HOME/.aws/credentials"
 if [ ! -e $AWSCRED ]; then
     echo "Not found $AWSCRED"
 else
+
     echo "Create aws-XXX aliases by $AWSCRED"
+
     for p in `cat $AWSCRED | grep "\[" | sed 's/\[\(.*\)\]/\1/g' | grep profile | cut -d" " -f2`
     do
         alias "aws-$p"="aws --profile $p"
-        complete -C aws_completer aws-$p
+	complete -C aws_completer "aws-$p"
     done
-fi
 
-#----------------------
-# GCP
-#----------------------
-source $HOME/scripts/google-cloud-sdk/completion.zsh.inc
+fi

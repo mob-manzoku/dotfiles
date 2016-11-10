@@ -25,10 +25,20 @@ alias   uuu="cd ../../../"
 alias  uuuu="cd ../../../../"
 alias uuuuu="cd ../../../../../"
 
-alias e="emacs"
+alias w="PROCPS_USERLEN=25 PROCPS_FROMLEN=20 w"
 
 # Ansible
 alias ap="ansible-playbook"
+alias av="ansible-vault edit"
 alias aw="ansible-working"
 alias assh="ansible-pssh"
 
+function e () {
+    FILENAME="$(basename $1)"
+
+    if [[ "$FILENAME" =~ "private\.yml|encrypted\.yml" ]]; then
+    	ansible-vault edit $1
+    else
+	emacs $1
+    fi
+}
