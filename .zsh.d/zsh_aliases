@@ -34,9 +34,7 @@ alias aw="ansible-working"
 alias assh="ansible-pssh"
 
 function e () {
-    FILENAME="$(basename $1)"
-
-    if [[ "$FILENAME" =~ "private\.yml|encrypted\.yml" ]]; then
+    if head -n1 $1 | fgrep -q '$ANSIBLE_VAULT'; then
     	ansible-vault edit $1
     else
 	emacs $1
