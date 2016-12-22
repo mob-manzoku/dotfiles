@@ -9,7 +9,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-alias ls="ls -hF --color=auto"
+alias ls="ls -hF"
 alias l="ls"
 alias ll="ls -l"
 alias lll="ls -l"
@@ -26,6 +26,8 @@ alias  uuuu="cd ../../../../"
 alias uuuuu="cd ../../../../../"
 
 alias w="PROCPS_USERLEN=25 PROCPS_FROMLEN=20 w"
+
+alias jq="jq -C"
 
 # Ansible
 alias ap="ansible-playbook"

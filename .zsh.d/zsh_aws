@@ -8,7 +8,13 @@ source $HOME/scripts/google-cloud-sdk/completion.zsh.inc
 #----------------------
 
 # Enable complete
-source /usr/local/bin/aws_zsh_completer.sh
+if [ -e /usr/local/bin/aws_zsh_completer.sh ]; then
+   source /usr/local/bin/aws_zsh_completer.sh
+fi
+
+if [ -e "$(pyenv which aws_zsh_completer.sh)" ]; then
+   source "$(pyenv which aws_zsh_completer.sh)"
+fi
 
 # Create alias for each profile
 AWSCRED="$HOME/.aws/credentials"
