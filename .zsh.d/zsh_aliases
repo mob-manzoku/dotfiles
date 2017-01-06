@@ -29,12 +29,16 @@ alias w="PROCPS_USERLEN=25 PROCPS_FROMLEN=20 w"
 
 alias jq="jq -C"
 
+alias dig="dig -4"
+
 # Ansible
 alias ap="ansible-playbook"
 alias av="ansible-vault edit"
 alias aw="ansible-working"
 alias assh="ansible-pssh"
 
+# Editor
+alias emacs="emacs -nw"
 function e () {
     if head -n1 $1 | fgrep -q '$ANSIBLE_VAULT'; then
     	ansible-vault edit $1
