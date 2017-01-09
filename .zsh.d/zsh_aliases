@@ -46,3 +46,5 @@ function e () {
 	emacs $1
     fi
 }
+
+alias sshconfig="cat ~/.ssh/conf.d/* ~/.ssh/conf.d/gitignore/*"
