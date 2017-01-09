@@ -47,4 +47,4 @@ function e () {
     fi
 }
 
-alias ssh-config="cat ~/.ssh/conf.d/* ~/.ssh/conf.d/gitignore/*"
+alias ssh-config='find ~/.ssh/conf.d/ -type f -exec cat {} \;'
