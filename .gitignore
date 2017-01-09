@@ -5,3 +5,8 @@
 .emacs.d/el-get/
 .emacs.d/ac-comphist.dat
 .emacs.d/.python-environments/
+
+.ssh/config
+.ssh/*.id_rsa
+.ssh/*.id_rsa.pub
+.ssh/known_hosts
