@@ -4,9 +4,8 @@
 [core]
         editor = emacs
 [pager]
-    log = /usr/share/doc/git/contrib/diff-highlight/diff-highlight | lv
-    show = /usr/share/doc/git/contrib/diff-highlight/diff-highlight | lv
-    diff = /usr/share/doc/git/contrib/diff-highlight/diff-highlight | lv
-
+    log = ~/.share/doc/git/contrib/diff-highlight/diff-highlight | less
+    show = ~/.share/doc/git/contrib/diff-highlight/diff-highlight | less
+    diff = ~/.share/doc/git/contrib/diff-highlight/diff-highlight | less
 [alias]
     unstage = "reset HEAD"
