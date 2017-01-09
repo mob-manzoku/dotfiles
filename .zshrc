@@ -26,3 +26,7 @@ fi
 if [ -f ${HOME}/.zsh.d/zsh_tmux ]; then
     source ${HOME}/.zsh.d/zsh_tmux
 fi
+
+if [ -f ${HOME}/.zsh.d/zsh_create_config ]; then
+    source ${HOME}/.zsh.d/zsh_create_config
+fi
