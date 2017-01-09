@@ -1,6 +1,6 @@
 # Divided ssh config
 
 ```
-$ alias ssh-config='find ~/.ssh/conf.d/ -type f -exec cat {} \;'
+$ alias ssh-config='find ~/.ssh/conf.d/ -name "*.conf" -exec cat {} \;'
 $ ssh-config > ~/.ssh/config
 ```
