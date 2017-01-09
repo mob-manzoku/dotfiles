@@ -47,4 +47,4 @@ function e () {
     fi
 }
 
-alias sshconfig="cat ~/.ssh/conf.d/* ~/.ssh/conf.d/gitignore/*"
+alias ssh-config="cat ~/.ssh/conf.d/* ~/.ssh/conf.d/gitignore/*"
