@@ -1,6 +1,9 @@
 *~
 .DS_Store
 
+.config/gcloud
+.config/hub
+
 .emacs.d/elpa/
 .emacs.d/el-get/
 .emacs.d/ac-comphist.dat
