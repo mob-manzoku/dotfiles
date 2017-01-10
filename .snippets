@@ -1,0 +1,5 @@
+source bin/activate
+aws-next s3 ls s3://infra.repository.next.ntg.mobcast.jp/
+git branch | grep -v master | xargs git branch -d
+export GOPATH=`pwd`
+ln -s ../../next/office/roles/noc-config/files/ansible.cfg .
