@@ -52,4 +52,4 @@ function e () {
     fi
 }
 
-alias ssh-config='find ~/.ssh/conf.d/ -name "*.conf" -exec cat {} \;'
+alias ssh-config='find ~/.ssh/conf.d/ -name "*.conf" | sort | xargs cat'
