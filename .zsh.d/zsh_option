@@ -7,3 +7,11 @@ export SAVEHIST=${HISTSIZE}
 autoload -Uz colors
 colors
 
+# Ctrl-L でスクリーンきれいにしてrehashもする
+clear-screen-rehash() {
+        zle clear-screen
+        rehash
+        zle reset-prompt
+}
+zle -N clear-screen-rehash
+bindkey '^L' clear-screen-rehash
