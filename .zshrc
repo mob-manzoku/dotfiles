@@ -3,9 +3,11 @@ compinit -u
 
 PS1="${USER}@${HOST%%.*} %1~ %(!.#.$) "
 
-for i in /etc/profile.d/*.sh ; do
-    [ -r $i ] && source $i
-done
+if [ -d /etc/profile.d/ ]; then
+    for i in /etc/profile.d/*.sh ; do
+	[ -r $i ] && source $i
+    done
+fi
 
 if [ -f ${HOME}/.zsh.d/zsh_env ]; then
     source ${HOME}/.zsh.d/zsh_env

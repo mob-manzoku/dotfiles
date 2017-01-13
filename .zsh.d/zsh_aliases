@@ -14,6 +14,11 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
+if [ -d /usr/local/opt/coreutils/libexec/gnubin ] ; then
+  export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
+  export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
+fi
+
 alias ls="ls -hF --color"
 alias l="ls"
 alias ll="ls -l"
