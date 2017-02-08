@@ -3,6 +3,9 @@ compinit -u
 
 PS1="${USER}@${HOST%%.*} %1~ %(!.#.$) "
 
+fpath=(/usr/local/share/zsh-completions $fpath)
+fpath=(${HOME}/.zsh.d/completion $fpath)
+
 if [ -d /etc/profile.d/ ]; then
     for i in /etc/profile.d/*.sh ; do
 	[ -r $i ] && source $i
