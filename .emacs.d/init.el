@@ -108,13 +108,13 @@
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t)
 
-;; Golang
-(el-get-bundle go-mode)
-(el-get-bundle go-autocomplete)
-(el-get-bundle go-eldoc)
-(el-get-bundle go-lint)
-(setq gofmt-command "goimports")
-(add-hook 'before-save-hook 'gofmt-before-save)
+;; ;; Golang
+;; (el-get-bundle go-mode)
+;; (el-get-bundle go-autocomplete)
+;; (el-get-bundle go-eldoc)
+;; (el-get-bundle go-lint)
+;; (setq gofmt-command "goimports")
+;; (add-hook 'before-save-hook 'gofmt-before-save)
 
 
 ;; PHP
