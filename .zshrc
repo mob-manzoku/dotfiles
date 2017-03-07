@@ -6,6 +6,8 @@ PS1="${USER}@${HOST%%.*} %1~ %(!.#.$) "
 fpath=(/usr/local/share/zsh-completions $fpath)
 fpath=(${HOME}/.zsh.d/completion $fpath)
 
+echo -ne "\033]0;${HOST}\007"
+
 if [ -d /etc/profile.d/ ]; then
     for i in /etc/profile.d/*.sh ; do
 	[ -r $i ] && source $i
