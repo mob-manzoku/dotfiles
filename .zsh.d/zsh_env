@@ -1,13 +1,15 @@
 # PATH to gcp sdk
 export PATH="$HOME/scripts/google-cloud-sdk/bin:$PATH"
 
-# PATH to self made scrips
-export PATH="$HOME/scripts:$PATH"
-
-export PATH="$HOME/usr/local/bin:$PATH"
-
 # PATH to cask
 export PATH="$HOME/.cask/bin:$PATH"
+
+# PATH to local bin
+export PATH="$HOME/usr/local/bin:$PATH"
+
+# PATH to golang
+export GOROOT="$HOME/usr/local/go"
+export PATH="$GOROOT/bin:$PATH"
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -22,6 +24,10 @@ if [ -d "${RBENV_ROOT}" ]; then
    export PATH=${RBENV_ROOT}/bin:$PATH
    eval "$(rbenv init -)"
 fi
+
+# PATH to self made scrips
+export PATH="$HOME/scripts:$PATH"
+
 
 # Editor
 export EDITOR=emacs
