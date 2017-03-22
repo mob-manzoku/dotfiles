@@ -123,6 +123,7 @@
 ;; Ansible
 (el-get-bundle yaml-mode)
 (el-get-bundle nginx-mode)
+(add-to-list 'auto-mode-alist '("\\.cnf$" . conf-mode))
 
 ;; etc
 (el-get-bundle markdown-mode)
