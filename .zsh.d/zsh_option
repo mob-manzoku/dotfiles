@@ -15,3 +15,19 @@ clear-screen-rehash() {
 }
 zle -N clear-screen-rehash
 bindkey '^L' clear-screen-rehash
+
+function _check-versions() {
+
+    _arguments -C \
+	       '1:: :->1' \
+	&& ret=0
+
+    case "$state" in
+	(1)
+	    compadd `check-versions`
+	    ;;
+    esac
+
+}
+
+compdef _check-versions check-versions
