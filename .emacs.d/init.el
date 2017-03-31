@@ -124,6 +124,8 @@
 (el-get-bundle yaml-mode)
 (el-get-bundle nginx-mode)
 (add-to-list 'auto-mode-alist '("\\.cnf$" . conf-mode))
+(el-get-bundle apache-mode)
+(add-to-list 'auto-mode-alist '("td-agent\\.conf$" . apache-mode))
 
 ;; etc
 (el-get-bundle markdown-mode)
