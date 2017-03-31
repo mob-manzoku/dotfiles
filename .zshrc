@@ -48,3 +48,5 @@ fi
 
 source ${HOME}/.zsh.d/peco-snippets
 source ${HOME}/.zsh.d/zsh_npm
+
+eval "$(direnv hook zsh)"

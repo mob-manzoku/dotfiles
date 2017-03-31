@@ -18,8 +18,6 @@ if [ -d "${PYENV_ROOT}" ]; then
    eval "$(pyenv init -)"
 fi
 
-source ~/.autoenv/activate.sh
-
 # rbenv
 export RBENV_ROOT="$HOME/.rbenv"
 if [ -d "${RBENV_ROOT}" ]; then
