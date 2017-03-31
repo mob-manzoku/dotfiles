@@ -41,6 +41,8 @@ alias jq="jq -C"
 
 alias dig="dig -4"
 
+alias crontab="crontab -i"
+
 # Ansible
 alias ap="ansible-playbook"
 alias av="ansible-vault edit"
