@@ -1,7 +1,7 @@
 autoload -U compinit
 compinit -u
 
-PS1="${USER}@${HOST%%.*} %1~ %(!.#.$) "
+PS1="%F{green}${USER}@${HOST%%.*}%f %1~ %(!.#.$) "
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 fpath=(${HOME}/.zsh.d/completion $fpath)
