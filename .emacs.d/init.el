@@ -136,6 +136,8 @@
 (add-to-list 'auto-mode-alist '("crontab"  . crontab-mode))
 
 (add-to-list 'auto-mode-alist '(".zsh.d"  . shell-script-mode))
+
+(add-to-list 'auto-mode-alist '("\\.pac$"  . js2-mode))
 ;;; init.el ends here
 (put 'upcase-region 'disabled nil)
 (custom-set-variables
