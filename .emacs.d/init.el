@@ -135,6 +135,7 @@
 (add-to-list 'auto-mode-alist '("cron\\(tab\\)?\\."    . crontab-mode))
 (add-to-list 'auto-mode-alist '("crontab"  . crontab-mode))
 
+(add-to-list 'auto-mode-alist '(".zsh.d"  . shell-script-mode))
 ;;; init.el ends here
 (put 'upcase-region 'disabled nil)
 (custom-set-variables
