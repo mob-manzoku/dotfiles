@@ -1,13 +1,25 @@
+#####################
+# Prompt
+#####################
+PS1="%F{green}${USER}@${HOST%%.*}%f %1~ %(!.#.$) "
+
+# iTerm TAB name
+echo -ne "\033]0;${HOST}\007"
+
+#####################
+# Completions
+#####################
+fpath=(${HOME}/src/github.com/zsh-users/zsh-completions/src $fpath)
+fpath=(${HOME}/usr/local/zsh $fpath)
+fpath=(${HOME}/.zsh.d/completion $fpath)
+
 autoload -U compinit
 compinit -u
 
-PS1="%F{green}${USER}@${HOST%%.*}%f %1~ %(!.#.$) "
 
-fpath=(/usr/local/share/zsh-completions $fpath)
-fpath=(${HOME}/.zsh.d/completion $fpath)
-
-echo -ne "\033]0;${HOST}\007"
-
+#####################
+# Includes
+#####################
 if [ -d /etc/profile.d/ ]; then
     for i in /etc/profile.d/*.sh ; do
 	[ -r $i ] && source $i
@@ -50,3 +62,4 @@ source ${HOME}/.zsh.d/peco-snippets
 source ${HOME}/.zsh.d/zsh_npm
 
 eval "$(direnv hook zsh)"
+
