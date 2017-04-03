@@ -1,8 +1,11 @@
-# PATH to gcp sdk
-export PATH="$HOME/scripts/google-cloud-sdk/bin:$PATH"
+GITHUB_USER=rmanzoku
 
-# PATH to cask
-export PATH="$HOME/.cask/bin:$PATH"
+#################
+# PATH
+#################
+
+# PATH to gcp sdk
+# export PATH="$HOME/scripts/google-cloud-sdk/bin:$PATH"
 
 # PATH to local bin
 export PATH="$HOME/usr/local/bin:$PATH"
@@ -26,8 +29,11 @@ if [ -d "${RBENV_ROOT}" ]; then
 fi
 
 # PATH to self made scrips
-export PATH="$HOME/scripts:$PATH"
+export PATH="$HOME/src/github.com/$GITHUB_USER/scripts:$PATH"
 
+#################
+# etc
+#################
 
 # Editor
 export EDITOR=emacs
