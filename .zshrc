@@ -13,6 +13,8 @@ fpath=(${HOME}/src/github.com/zsh-users/zsh-completions/src $fpath)
 fpath=(${HOME}/usr/local/zsh $fpath)
 fpath=(${HOME}/.zsh.d/completion $fpath)
 
+function fpath-search() { for f in $fpath; do ls -d $f/* 2>>/dev/null | grep $1 ; done}
+
 autoload -U compinit
 compinit -u
 
