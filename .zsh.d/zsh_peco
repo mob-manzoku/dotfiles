@@ -36,3 +36,12 @@ function peco-src () {
 }
 zle -N peco-src
 bindkey '^]' peco-src
+
+function peco-cd() {
+
+    cd "$(find . -type d -print | peco)"
+}
+
+function peco-open() {
+    open "$(find . -type d -print | peco)"
+}

@@ -38,6 +38,10 @@ if [ -f ${HOME}/.zsh.d/zsh_option ]; then
     source ${HOME}/.zsh.d/zsh_option
 fi
 
+if [ -f ${HOME}/.zsh.d/zsh_peco ]; then
+    source ${HOME}/.zsh.d/zsh_peco
+fi
+
 if [ -f ${HOME}/.zsh.d/zsh_aliases ]; then
     source ${HOME}/.zsh.d/zsh_aliases
 fi
@@ -52,10 +56,6 @@ fi
 
 if [ -f ${HOME}/.zsh.d/zsh_git ]; then
     source ${HOME}/.zsh.d/zsh_git
-fi
-
-if [ -f ${HOME}/.zsh.d/zsh_peco ]; then
-    source ${HOME}/.zsh.d/zsh_peco
 fi
 
 if [ -f ${HOME}/.zsh.d/zsh_create_config ]; then
