@@ -1,11 +1,17 @@
 [user]
         email = manzoku.ryo@gmail.com
         name = Ryo Manzoku
+
 [core]
         editor = emacs
+
 [pager]
-    log = ~/.share/doc/git/contrib/diff-highlight/diff-highlight | less
-    show = ~/.share/doc/git/contrib/diff-highlight/diff-highlight | less
-    diff = ~/.share/doc/git/contrib/diff-highlight/diff-highlight | less
+	log = ~/.share/doc/git/contrib/diff-highlight/diff-highlight | less
+	show = ~/.share/doc/git/contrib/diff-highlight/diff-highlight | less
+    	diff = ~/.share/doc/git/contrib/diff-highlight/diff-highlight | less
+
 [alias]
-    unstage = "reset HEAD"
+	unstage = "reset HEAD"
+
+[ghq]
+	root = ~/src
