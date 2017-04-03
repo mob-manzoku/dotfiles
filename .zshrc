@@ -16,6 +16,10 @@ fpath=(${HOME}/.zsh.d/completion $fpath)
 autoload -U compinit
 compinit -u
 
+#####################
+# direnv
+#####################
+eval "$(direnv hook zsh)"
 
 #####################
 # Includes
@@ -50,6 +54,10 @@ if [ -f ${HOME}/.zsh.d/zsh_git ]; then
     source ${HOME}/.zsh.d/zsh_git
 fi
 
+if [ -f ${HOME}/.zsh.d/zsh_peco ]; then
+    source ${HOME}/.zsh.d/zsh_peco
+fi
+
 if [ -f ${HOME}/.zsh.d/zsh_create_config ]; then
     source ${HOME}/.zsh.d/zsh_create_config
 fi
@@ -58,8 +66,5 @@ if [ -f ${HOME}/.zsh.d/secret ]; then
     source ${HOME}/.zsh.d/secret
 fi
 
-source ${HOME}/.zsh.d/peco-snippets
-source ${HOME}/.zsh.d/zsh_npm
 
-eval "$(direnv hook zsh)"
 
