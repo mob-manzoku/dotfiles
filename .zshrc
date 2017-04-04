@@ -64,8 +64,8 @@ if [ -f ${HOME}/.zsh.d/zsh_create_config ]; then
     source ${HOME}/.zsh.d/zsh_create_config
 fi
 
-if [ -f ${HOME}/.zsh.d/secret ]; then
-    source ${HOME}/.zsh.d/secret
+if [ -f ${HOME}/.env ]; then
+    source ${HOME}/.env
 fi
 
 
