@@ -1,16 +1,18 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;  General
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; package --- Summary
+;;; Commentary:
 
 ;;; el-get
 ;;; code:
-
 
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
 ;; (package-initialize)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;  General
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (when load-file-name
   (setq user-emacs-directory (file-name-directory load-file-name)))
@@ -27,6 +29,9 @@
 (global-set-key "\M-g" 'goto-line)
 (keyboard-translate ?\C-h ?\C-?)
 ;;(normal-erase-is-backspace-mode 0)
+
+;;; バージョンコントロールされたsymlinkに対する質問を消す
+(setq vc-follow-symlinks t)
 
 ;;; ファイル末にスペース
 (setq require-final-newline t)
