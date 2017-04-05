@@ -46,7 +46,7 @@ zle -N peco-src
 bindkey '^\' peco-src
 
 function peco-cd-bind() {
-    local selected_dir=$(find . -type d -print | peco --query "$LBUFFER")
+    local selected_dir=$(find $PWD -name '.*' -prune -o -type d -print | peco --query "$LBUFFER")
     if [ -n "$selected_dir" ]; then
 	BUFFER="cd ${selected_dir}"
 	zle accept-line
