@@ -7,7 +7,7 @@ PS1="%F{green}${USER}@${HOST%%.*}%f %1~ %(!.#.$) "
 echo -ne "\033]0;${HOST}\007"
 
 #####################
-# Completions
+# Autoload
 #####################
 GITHUB_USER="rmanzoku"
 fpath=(${HOME}/src/github.com/zsh-users/zsh-completions/src $fpath)
@@ -17,8 +17,19 @@ fpath=(${HOME}/.zsh.d/completion $fpath)
 
 function fpath-search() { for f in $fpath; do ls -d $f/* 2>>/dev/null | grep $1 ; done}
 
-autoload -U compinit
+autoload -Uz compinit chpwd_recent_dirs cdr add-zsh-hook
 compinit -u
+add-zsh-hook chpwd chpwd_recent_dirs
+
+# cdr の設定
+if [ ! -d $HOME/.cache/shell/ ]; then
+    mkdir -p $HOME/.cache/shell/
+fi
+zstyle ':completion:*' recent-dirs-insert both
+zstyle ':chpwd:*' recent-dirs-max 500
+zstyle ':chpwd:*' recent-dirs-default true
+zstyle ':chpwd:*' recent-dirs-file "$HOME/.cache/shell/chpwd-recent-dirs"
+zstyle ':chpwd:*' recent-dirs-pushd true
 
 #####################
 # direnv

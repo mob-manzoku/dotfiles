@@ -1,3 +1,12 @@
+function peco-cd() {
+    cd "$(find . -type d -print | peco)"
+}
+
+function peco-open() {
+    open "$(find . -type d -print | peco)"
+}
+
+
 function peco-snippets() {
 
     local line
@@ -25,7 +34,6 @@ function peco-snippets() {
 zle -N peco-snippets
 bindkey '^x^x' peco-snippets
 
-
 function peco-src () {
     local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
     if [ -n "$selected_dir" ]; then
@@ -35,13 +43,26 @@ function peco-src () {
     zle clear-screen
 }
 zle -N peco-src
-bindkey '^]' peco-src
+bindkey '^\' peco-src
 
-function peco-cd() {
-
-    cd "$(find . -type d -print | peco)"
+function peco-cd-bind() {
+    local selected_dir=$(find . -type d -print | peco --query "$LBUFFER")
+    if [ -n "$selected_dir" ]; then
+	BUFFER="cd ${selected_dir}"
+	zle accept-line
+    fi
+    zle clear-screen
 }
+zle -N peco-cd-bind
+bindkey '^[' peco-cd-bind
 
-function peco-open() {
-    open "$(find . -type d -print | peco)"
+function peco-cdr() {
+    local selected_dir=$(cdr -l | awk '{ print $2 }' | peco --query "$LBUFFER")
+    if [ -n "$selected_dir" ]; then
+	BUFFER="cd ${selected_dir}"
+	zle accept-line
+    fi
+    zle clear-screen
 }
+zle -N peco-cdr
+bindkey '^]' peco-cdr

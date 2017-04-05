@@ -2,16 +2,12 @@ export HISTFILE="${HOME}/.zsh.d/.zsh_history"
 export HISTSIZE=100000
 export SAVEHIST=${HISTSIZE}
 
-# プロンプト
-# 色付きにする。
-autoload -Uz colors
-colors
-
 # Ctrl-L でスクリーンきれいにしてrehashもする
 clear-screen-rehash() {
-        zle clear-screen
-        rehash
-        zle reset-prompt
+    zle clear-screen
+    BUFFER="rehash;pwd"
+    zle accept-line
+    #zle reset-prompt
 }
 zle -N clear-screen-rehash
 bindkey '^L' clear-screen-rehash
