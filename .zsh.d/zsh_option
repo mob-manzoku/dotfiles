@@ -5,9 +5,9 @@ export SAVEHIST=${HISTSIZE}
 # Ctrl-L でスクリーンきれいにしてrehashもする
 clear-screen-rehash() {
     zle clear-screen
-    BUFFER="rehash;pwd"
+    LBUFFER="rehash;pwd"
     zle accept-line
-    #zle reset-prompt
+    zle reset-prompt
 }
 zle -N clear-screen-rehash
 bindkey '^L' clear-screen-rehash
