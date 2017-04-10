@@ -113,6 +113,13 @@
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t)
 
+;; Ruby
+(el-get-bundle robe-mode)
+(add-hook 'ruby-mode-hook
+	  '(lambda ()
+	     (setq flycheck-checker 'ruby-rubocop)
+	     (flycheck-mode 1)))
+
 ;; ;; Golang
 ;; (el-get-bundle go-mode)
 ;; (el-get-bundle go-autocomplete)
