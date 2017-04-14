@@ -115,6 +115,8 @@
 
 ;; Ruby
 (el-get-bundle robe-mode)
+(add-hook 'ruby-mode-hook 'robe-mode)
+(add-hook 'robe-mode-hook 'ac-robe-setup)
 (add-hook 'ruby-mode-hook
 	  '(lambda ()
 	     (setq flycheck-checker 'ruby-rubocop)
