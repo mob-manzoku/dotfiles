@@ -8,11 +8,12 @@ GITHUB_USER=rmanzoku
 # export PATH="$HOME/scripts/google-cloud-sdk/bin:$PATH"
 
 # PATH to local bin
-export PATH="$HOME/usr/local/bin:$PATH"
+export PATH="$HOME/bin:$HOME/usr/local/bin:$PATH"
 
 # PATH to golang
 export GOROOT="$HOME/usr/local/go"
 export PATH="$GOROOT/bin:$PATH"
+export GOPATH="$HOME"
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
