@@ -1,4 +1,4 @@
 export DISPLAY=remote:0.1
-aws ec2 describe-instances --filter "Name=instance-state-name,Values=running" | jq '.Reservations[].Instances[] | {InstanceId, PublicIpAddress, InstanceName: (.Tags[] | select(.Key=="Name").Value)}'
+AWS_PROFILE="" aws ec2 describe-instances --filter "Name=instance-state-name,Values=running" | jq '.Reservations[].Instances[] | {InstanceId, PublicIpAddress, PrivateIpAddress, InstanceName: (.Tags[] | select(.Key=="Name").Value)}'
 git branch | grep -v master | xargs git branch -d
 sudo du -sh /home/* | sort -hr | column -t | post2slack
