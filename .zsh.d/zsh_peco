@@ -1,3 +1,7 @@
+alias pssh='ssh $(peco $HOME/.cache/hosts.private | cut -f1 -d" ")'
+alias pssh-public='ssh $(peco $HOME/.cache/hosts.public | cut -f1 -d" ")'
+
+
 function peco-cd() {
     cd "$(find . -type d -print | peco)"
 }
