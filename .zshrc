@@ -10,8 +10,9 @@ echo -ne "\033]0;${HOST}\007"
 # Autoload
 #####################
 GITHUB_USER="rmanzoku"
-fpath=(${HOME}/src/github.com/zsh-users/zsh-completions/src $fpath)
+
 fpath=(${HOME}/usr/local/zsh $fpath)
+fpath=(${HOME}/usr/local/zsh/zsh-completions/src $fpath)
 fpath=(${HOME}/src/github.com/$GITHUB_USER/scripts/zsh-functions $fpath)
 fpath=(${HOME}/.zsh.d/completion $fpath)
 
