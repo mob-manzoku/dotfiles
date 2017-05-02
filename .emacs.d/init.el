@@ -143,8 +143,10 @@
 
 ;; etc
 (el-get-bundle markdown-mode)
-(el-get-bundle crontab-mode)
 
+(el-get-bundle toml-mode)
+
+(el-get-bundle crontab-mode)
 (add-to-list 'auto-mode-alist '("\\.cron\\(tab\\)?\\'" . crontab-mode))
 (add-to-list 'auto-mode-alist '("cron\\(tab\\)?\\."    . crontab-mode))
 (add-to-list 'auto-mode-alist '("crontab"  . crontab-mode))
