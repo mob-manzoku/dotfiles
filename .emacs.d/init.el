@@ -68,44 +68,17 @@
 ;;;;  Langage
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; React.js
+;; Javascript
 (el-get-bundle web-mode)
 (el-get-bundle js2-mode)
 (el-get-bundle json-mode)
-;; (el-get-bundle tern)
-;; (el-get-bundle tern-auto-complete)
 
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
 
 ;; disable jshint since we prefer eslint checking
 (setq-default flycheck-disabled-checkers
-  (append flycheck-disabled-checkers
-    '(javascript-jshint)))
-
-(add-hook 'web-mode-hook (lambda () (tern-mode t)))
-
-(eval-after-load 'tern
-  '(progn
-     (require 'tern-auto-complete)
-     (tern-ac-setup)))
-
-;; use eslint with web-mode for jsx files
-(flycheck-add-mode 'javascript-eslint 'web-mode)
-
-;; disable json-jsonlist checking for json files
-(setq-default flycheck-disabled-checkers
-  (append flycheck-disabled-checkers
-    '(json-jsonlist)))
-
-(defun my-web-mode-hook ()
-  "Hooks for Web mode. Adjust indents"
-  ;;; http://web-mode.org/
-  (setq web-mode-markup-indent-offset 2)
-  (setq web-mode-css-indent-offset 2)
-  (setq web-mode-code-indent-offset 2))
-
-(add-hook 'web-mode-hook  'my-web-mode-hook)
-
+	      (append flycheck-disabled-checkers
+		      '(javascript-jshint)))
 
 ;; Python
 (el-get-bundle tkf/emacs-python-environment)
