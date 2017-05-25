@@ -73,12 +73,20 @@
 (el-get-bundle js2-mode)
 (el-get-bundle json-mode)
 
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
 
 ;; disable jshint since we prefer eslint checking
 (setq-default flycheck-disabled-checkers
 	      (append flycheck-disabled-checkers
 		      '(javascript-jshint)))
+
+(defun my-js2-mode-hook ()
+  "Hooks for js2 mode."
+  (setq indent-tabs-mode nil)
+  (setq js2-basic-offset 2))
+
+(add-hook 'js2-mode-hook  'my-js2-mode-hook)
 
 ;; Python
 (el-get-bundle tkf/emacs-python-environment)
