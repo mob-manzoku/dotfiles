@@ -82,5 +82,5 @@ if [ -f ${HOME}/.env ]; then
     source ${HOME}/.env
 fi
 
-
-
+# screenしたときのPATH重複解消
+typeset -U path PATH

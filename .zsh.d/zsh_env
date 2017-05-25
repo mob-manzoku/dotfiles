@@ -1,4 +1,5 @@
 GITHUB_USER=rmanzoku
+HOME_LOCAL="$HOME/usr/local"
 
 #################
 # PATH
@@ -8,12 +9,19 @@ GITHUB_USER=rmanzoku
 # export PATH="$HOME/scripts/google-cloud-sdk/bin:$PATH"
 
 # PATH to local bin
-export PATH="$HOME/bin:$HOME/usr/local/bin:$PATH"
+export PATH="$HOME/bin:$HOME_LOCAL/bin:$PATH"
 
 # PATH to golang
-export GOROOT="$HOME/usr/local/go"
+export GOROOT="$HOME_LOCAL/go"
 export PATH="$GOROOT/bin:$PATH"
 export GOPATH="$HOME"
+
+# PATH to nodejs
+export NODEROOT="$HOME_LOCAL/node"
+if [ -d "${NODEROOT}" ]; then
+    export PATH="$NODEROOT/bin:$PATH"
+    export PATH="$HOME_LOCAL/node_modules/.bin:$PATH"
+fi
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
