@@ -43,6 +43,10 @@ alias dig="dig -4"
 
 alias crontab="crontab -i"
 
+if [[ -x `which colordiff` ]]; then
+    alias diff='colordiff'
+fi
+
 # Ansible
 alias ap="ansible-playbook"
 alias av="ansible-vault edit"
