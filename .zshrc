@@ -33,11 +33,6 @@ zstyle ':chpwd:*' recent-dirs-file "$HOME/.cache/shell/chpwd-recent-dirs"
 zstyle ':chpwd:*' recent-dirs-pushd true
 
 #####################
-# direnv
-#####################
-eval "$(direnv hook zsh)"
-
-#####################
 # Includes
 #####################
 if [ -d /etc/profile.d/ ]; then

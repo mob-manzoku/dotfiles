@@ -40,6 +40,9 @@ fi
 # PATH to self made scrips
 export PATH="$HOME/src/github.com/$GITHUB_USER/scripts:$PATH"
 
+# direnv
+eval "$(direnv hook zsh)"
+
 #################
 # etc
 #################
