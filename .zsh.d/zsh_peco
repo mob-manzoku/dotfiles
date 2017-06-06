@@ -72,3 +72,11 @@ function peco-cdr() {
 }
 zle -N peco-cdr
 bindkey '^]' peco-cdr
+
+
+function peco-select-history() {
+    BUFFER=$(history -n 1 | tac | awk '!a[$0]++' | peco --query "$LBUFFER")
+    CURSOR=$#BUFFER
+}
+zle -N peco-select-history
+bindkey '^R' peco-select-history
