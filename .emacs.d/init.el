@@ -111,6 +111,9 @@
 (setq gofmt-command "goimports")
 (add-hook 'before-save-hook 'gofmt-before-save)
 
+;; Groovy
+(el-get-bundle groovy-mode)
+(add-to-list 'auto-mode-alist '("Jenkinsfile$" . groovy-mode))
 
 ;; PHP
 (el-get-bundle php-mode)
