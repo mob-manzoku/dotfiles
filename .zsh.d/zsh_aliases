@@ -47,6 +47,9 @@ if [[ -x `which colordiff` ]]; then
     alias diff='colordiff'
 fi
 
+# Ruby
+alias be="bundle exec"
+
 # Ansible
 alias ap="ansible-playbook"
 alias av="ansible-vault edit"
