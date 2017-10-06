@@ -125,6 +125,9 @@
 (el-get-bundle apache-mode)
 (add-to-list 'auto-mode-alist '("td-agent\\.conf$" . apache-mode))
 
+;; Elastic beanstalk
+(add-to-list 'auto-mode-alist '("ebextensionfiles/.*\.config$" . yaml-mode))
+
 ;; etc
 (el-get-bundle markdown-mode)
 
