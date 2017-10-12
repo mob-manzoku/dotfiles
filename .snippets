@@ -2,3 +2,4 @@ export DISPLAY=remote:0.1
 git branch | grep -v master | xargs git branch -d
 sudo du -sh /home/* | sort -hr | column -t
 find $HOME/src -maxdepth 2 -mindepth 2 -and -type d -and ! -name rmanzoku -and ! -name studyplus
+fd -tf | xargs -I{} gixy --disable-includes {}  | less
