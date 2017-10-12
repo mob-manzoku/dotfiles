@@ -8,6 +8,8 @@
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
 	<integer>1</integer>
+	<key>AppleWindowTabbingMode</key>
+	<string>manual</string>
 	<key>Default Bookmark Guid</key>
 	<string>7215C0E9-E691-4B28-AEC2-09075843DEF2</string>
 	<key>FlashTabBarInFullscreen</key>
@@ -29,8 +31,10 @@
 	<key>NSFontPanelAttributes</key>
 	<string>1, 9</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>/Applications</string>
+	<string>~/Documents</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
+	<string>{712, 448}</string>
+	<key>NSNavPanelExpandedSizeForSaveMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
@@ -72,7 +76,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>195 199 1018 447 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>270 272 730 450 0 0 1280 777 </string>
+	<string>270 272 730 450 0 0 1280 800 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>152 50 650 423 0 0 1280 777 </string>
 	<key>New Bookmarks</key>
@@ -761,6 +765,8 @@
 	<string>~/src/github.com/rmanzoku/dotfiles/Library/Preferences</string>
 	<key>RightOption</key>
 	<integer>3</integer>
+	<key>SUAutomaticallyUpdate</key>
+	<true/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
@@ -770,7 +776,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-09-27T11:03:48Z</date>
+	<date>2017-10-12T01:29:20Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -796,6 +802,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.1</string>
+	<string>3.1.2</string>
 </dict>
 </plist>
