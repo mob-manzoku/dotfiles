@@ -57,6 +57,10 @@ if [ -f ${HOME}/.zsh.d/zsh_aliases ]; then
     source ${HOME}/.zsh.d/zsh_aliases
 fi
 
+if [ -f ${HOME}/.zsh.d/zsh_jq_snippet ]; then
+    source ${HOME}/.zsh.d/zsh_jq_snippet
+fi
+
 if [ -f ${HOME}/.zsh.d/zsh_aws ]; then
     source ${HOME}/.zsh.d/zsh_aws
 fi
