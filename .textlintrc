@@ -2,9 +2,7 @@
     "filters": {},
     "rules": {
 	"preset-ja-technical-writing": true,
-	"prh": {
-	    "rulePaths" :["~/usr/local/textlint/rules/WEB+DB_PRESS.yml","~/usr/local/textlint/rules/markdown.yml",]
-	}
+	"textlint-rule-spellcheck-tech-word": true
 
     }
 }
