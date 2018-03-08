@@ -37,6 +37,8 @@ alias uuuuu="cd ../../../../../"
 
 alias w="PROCPS_USERLEN=25 PROCPS_FROMLEN=20 w"
 
+alias ag='ag --pager="less -R"'
+
 alias jq="jq -C"
 
 alias dig="dig -4"
