@@ -40,8 +40,6 @@ fi
 # PATH to self made scrips
 export PATH="$HOME/src/github.com/$GITHUB_USER/scripts:$PATH"
 
-# direnv
-eval "$(direnv hook zsh)"
 
 #################
 # etc
@@ -53,3 +51,16 @@ export EDITOR=emacs
 # Pager
 export LESS="-g -M -R"
 export PAGER=less
+
+# direnv
+eval "$(direnv hook zsh)"
+
+# ssh-agent + screen
+agent="$HOME/.ssh/ssh-agent-`hostname`"
+if [ -S "$agent" ]; then
+    export SSH_AUTH_SOCK=$agent
+elif [ ! -S "$SSH_AUTH_SOCK" ]; then
+    export SSH_AUTH_SOCK=$agent
+elif [ ! -L "$SSH_AUTH_SOCK" ]; then
+    ln -snf "$SSH_AUTH_SOCK" $agent && export SSH_AUTH_SOCK=$agent
+fi
