@@ -119,6 +119,10 @@
 ;; PHP
 (el-get-bundle php-mode)
 
+;; Solidity
+(el-get-bundle solidity-mode)
+(setq solidity-flycheck-solc-checker-active t)
+
 ;; Ansible
 (el-get-bundle yaml-mode)
 (el-get-bundle nginx-mode)
