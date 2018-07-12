@@ -84,7 +84,7 @@
 (defun my-js2-mode-hook ()
   "Hooks for js2 mode."
   (setq indent-tabs-mode nil)
-  (setq js2-basic-offset 2))
+  (setq js2-basic-offset 4))
 
 (add-hook 'js2-mode-hook  'my-js2-mode-hook)
 
