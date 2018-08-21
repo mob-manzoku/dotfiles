@@ -15,6 +15,7 @@
 
 [alias]
 	unstage = "reset HEAD"
+	refs = !git checkout $(git branch | peco | awk '{ print $NF }')
 
 [ghq]
 	root = ~/src
