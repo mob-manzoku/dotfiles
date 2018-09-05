@@ -4,3 +4,4 @@ sudo du -sh /home/* | sort -hr | column -t
 find $HOME/src -maxdepth 2 -mindepth 2 -and -type d -and ! -name rmanzoku -and ! -name studyplus
 fd -tf | xargs -I{} gixy --disable-includes {}  | less
 docker images -f "dangling=true" -q | xargs docker rmi
+mkr-hosts-colums poweroff | cut -d" " -f2 | xargs mkr retire
