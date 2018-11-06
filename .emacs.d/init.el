@@ -112,6 +112,9 @@
 (setq gofmt-command "goimports")
 (add-hook 'before-save-hook 'gofmt-before-save)
 
+;; Protobuf
+(el-get-bundle protobuf-mode)
+
 ;; Groovy
 ;; (el-get-bundle groovy-mode)
 ;; (add-to-list 'auto-mode-alist '("Jenkinsfile$" . groovy-mode))
@@ -157,6 +160,7 @@
 (add-to-list 'auto-mode-alist '("crontab"  . crontab-mode))
 
 (add-to-list 'auto-mode-alist '(".zsh.d"  . shell-script-mode))
+(add-to-list 'auto-mode-alist '(".envrc"  . shell-script-mode))
 
 (add-to-list 'auto-mode-alist '("\\.pac$"  . js2-mode))
 ;;; init.el ends here
