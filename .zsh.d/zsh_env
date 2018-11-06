@@ -17,11 +17,11 @@ export GOROOT="$HOME_LOCAL/go"
 export PATH="$GOROOT/bin:$PATH"
 export GOPATH="$HOME"
 
-# PATH to nodejs
-export NODEROOT="$HOME_LOCAL/node"
-if [ -d "${NODEROOT}" ]; then
-    export PATH="$HOME_LOCAL/node_modules/.bin:$PATH"
-    export PATH="$NODEROOT/bin:$PATH"
+# ndenv
+export NDENV_ROOT="$HOME/.ndenv"
+if [ -d "${NDENV_ROOT}" ]; then
+   export PATH=${NDENV_ROOT}/bin:$PATH
+   eval "$(ndenv init -)"
 fi
 
 # pyenv
