@@ -12,6 +12,9 @@ HOME_LOCAL="$HOME/usr/local"
 export PATH="$HOME/src/github.com/ethereum/go-ethereum/build/bin:$PATH"
 export PATH="$HOME/bin:$HOME_LOCAL/bin:$PATH"
 
+# PATH to rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # PATH to golang
 export GOROOT="$HOME_LOCAL/go"
 export PATH="$GOROOT/bin:$PATH"
