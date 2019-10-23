@@ -124,7 +124,15 @@
 
 ;; Solidity
 (el-get-bundle solidity-mode)
+(setq solidity-comment-style 'slash)
 (setq solidity-flycheck-solc-checker-active t)
+(setq solidity-flycheck-solium-checker-active t)
+(defun my-solidity-mode-hook ()
+  "Hooks for solidity mode."
+  (setq indent-tabs-mode nil)
+  )
+
+(add-hook 'solidity-mode-hook  'my-solidity-mode-hook)
 
 ;; Ansible
 (el-get-bundle yaml-mode)
