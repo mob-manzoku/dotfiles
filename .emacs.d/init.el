@@ -108,9 +108,15 @@
 (el-get-bundle go-mode)
 (el-get-bundle go-autocomplete)
 (el-get-bundle go-eldoc)
-(el-get-bundle go-lint)
+
+(add-to-list 'load-path (concat (getenv "HOME")  "/usr/local/src/golang.org/x/lint/misc/emacs/"))
+(require 'golint)
+
 (setq gofmt-command "goimports")
 (add-hook 'before-save-hook 'gofmt-before-save)
+(let ((govet (flycheck-checker-get 'go-vet 'command)))
+  (when (equal (cadr govet) "tool")
+        (setf (cdr govet) (cddr govet))))
 
 ;; Protobuf
 (el-get-bundle protobuf-mode)
