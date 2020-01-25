@@ -1,4 +1,6 @@
 remixd -s $PWD --remix-ide https://remix.ethereum.org
+go mod init $(pwd | sed  's#'$HOME/src/'##')
+jq . -cM a > abi.json; abigen -abi abi.json -pkg $(basename $PWD) > $(basename $PWD).go
 godoc $(ghq list --full-path | peco) | $PAGER
 export DISPLAY=remote:0.1
 goimports-update-ignore;dragon-imports
