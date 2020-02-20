@@ -19,6 +19,8 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export GOROOT="$HOME_LOCAL/go"
 export PATH="$GOROOT/bin:$PATH"
 export GOPATH="$HOME"
+export GOSUMDB=off
+export GOPROXY=direct
 
 # nodenv
 export NODENV_ROOT="$HOME/.nodenv"
