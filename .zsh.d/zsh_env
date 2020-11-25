@@ -5,6 +5,9 @@ HOME_LOCAL="$HOME/usr/local"
 # PATH
 #################
 
+# PATH to homebrew
+export PATH="$PATH:/opt/homebrew/bin"
+
 # PATH to gcp sdk
 # export PATH="$HOME/scripts/google-cloud-sdk/bin:$PATH"
 
