@@ -110,7 +110,7 @@
 (el-get-bundle go-eldoc)
 
 (add-to-list 'load-path (concat (getenv "HOME")  "/usr/local/src/golang.org/x/lint/misc/emacs/"))
-(require 'golint)
+;;(require 'golint)
 
 (setq gofmt-command "goimports")
 (add-hook 'before-save-hook 'gofmt-before-save)
