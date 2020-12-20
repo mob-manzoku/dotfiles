@@ -41,6 +41,39 @@
 ;;; ファイル末にスペース
 (setq require-final-newline t)
 
+;;; 行末空白の表示
+(when (boundp 'show-trailing-whitespace)
+  (setq-default show-trailing-whitespace t))
+(set-face-background 'trailing-whitespace "purple4")
+
+;; backup file
+(setq make-backup-files t)
+(setq backup-directory "~/.bak.emacs")
+(if (and (boundp 'backup-directory)
+	 (not (fboundp 'make-backup-file-name-original)))
+    (progn
+      (fset 'make-backup-file-name-original
+	    (symbol-function 'make-backup-file-name))
+      (defun make-backup-file-name (filename)
+	(if (and (file-exists-p (expand-file-name backup-directory))
+		 (file-directory-p (expand-file-name backup-directory)))
+	    (concat (expand-file-name backup-directory)
+		    "/" (file-name-nondirectory filename))
+	            (make-backup-file-name-original filename)))))
+
+(leaf yaml-mode
+  :ensure t)
+
+(leaf nginx-mode
+  :ensure t)
+
+(leaf protobuf-mode
+  :ensure t
+  :config
+  (setq c-basic-offset 4)
+  )
+
+
 ;; Language Server
 (leaf lsp-mode
   :ensure t
@@ -60,7 +93,8 @@
   :mode (("\\.go\\'" . go-mode))
   :init
   (add-hook 'go-mode-hook #'lsp-deferred)
-  (add-hook 'go-mode-hook #'lsp-go-install-save-hooks))
+  (add-hook 'go-mode-hook #'lsp-go-install-save-hooks)
+  (add-hook 'go-mode-hook #'yas-minor-mode))
 
 
 (leaf lsp-ui
@@ -72,6 +106,11 @@
   :config
   (setq company-idle-delay 0)
   (setq company-minimum-prefix-length 1))
+
+(leaf yasnippet
+  :ensure t
+  :commands yas-minor-mode
+  :hook (go-mode . yas-minor-mode))
 
 (provide 'init)
 (custom-set-variables
