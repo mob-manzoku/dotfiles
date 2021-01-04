@@ -62,7 +62,7 @@ if [ -f ${HOME}/.zsh.d/zsh_jq_snippet ]; then
 fi
 
 if [ -f ${HOME}/.zsh.d/zsh_aws ]; then
-#    source ${HOME}/.zsh.d/zsh_aws
+    source ${HOME}/.zsh.d/zsh_aws
 fi
 
 if [ -f ${HOME}/.zsh.d/zsh_tmux ]; then
