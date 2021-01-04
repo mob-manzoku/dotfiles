@@ -19,7 +19,7 @@ if [ -d /usr/local/opt/coreutils/libexec/gnubin ] ; then
   export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
 fi
 
-alias ls="ls -hF -G"
+alias ls="ls -hF --color=auto"
 alias l="ls"
 alias ll="ls -l"
 alias lll="ls -l"
