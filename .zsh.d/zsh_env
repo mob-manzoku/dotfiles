@@ -19,9 +19,11 @@ export PATH="$HOME/bin:$HOME_LOCAL/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # PATH to golang
-export GOROOT="$HOME_LOCAL/go"
-export PATH="$GOROOT/bin:$PATH"
-export GOPATH="$HOME"
+export GOENV_ROOT="$HOME/.goenv"
+if [ -d "${GOENV_ROOT}" ]; then
+   export PATH=${GOENV_ROOT}/bin:$PATH
+   eval "$(goenv init -)"
+fi
 export GOSUMDB=off
 export GOPROXY=direct
 
